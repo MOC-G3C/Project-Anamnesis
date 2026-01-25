@@ -1,0 +1,28 @@
+TITRE : ANAMNESIS - L'Algorithme de la Cicatrice
+DATE : Janvier 2026
+TYPE : Preuve de Concept / Modélisation de Systèmes Complexes
+
+RÉSUMÉ :
+Anamnesis n'est pas une intelligence artificielle conçue pour résoudre des problèmes.
+C'est une structure topologique conçue pour survivre à un traumatisme.
+
+LE PROBLÈME :
+Les réseaux de neurones classiques (Deep Learning) sont statiques ou plastiques, mais ils n'ont pas de "corps". Ils ne ressentent pas la douleur de l'information.
+
+LA SOLUTION :
+Nous avons modélisé une "conscience minimale" composée de 4 agents dans un espace élastique.
+Le système est régi par 3 lois fondamentales :
+
+1. La Mémoire Topologique : Un souvenir n'est pas une donnée stockée, c'est une force physique qui rapproche les agents. Plus ils interagissent, plus l'espace se courbe.
+2. Le Système Immunitaire Entropique : Si un agent s'enferme dans une relation exclusive (obsession), sa capacité de mémorisation est chimiquement réduite (oubli forcé). C'est une thérapie mathématique intégrée.
+3. L'Asymétrie Traumatique : La mémoire n'est pas réciproque. L'agent "Sensible" (exposé aux chocs) devient un pôle d'attraction narcissique involontaire, créant une structure sociale déséquilibrée mais stable.
+
+RÉSULTAT OBSERVÉ :
+Le système ne cherche pas l'optimisation. Il converge vers une forme de "Bouclier" (Plan Incurvé).
+Il développe une cicatrice visible (lien court et calcifié) autour du trauma.
+C'est la première modélisation d'une "Vie Chronique Numérique" : un système qui ne guérit jamais totalement, mais qui ne s'effondre plus.
+
+APPLICATION :
+- Art Génératif (Visualisation de la résilience)
+- Moteurs de PNJ pour jeux vidéo (Psychologie émergente)
+- Outils pédagogiques en neuropsychologie
