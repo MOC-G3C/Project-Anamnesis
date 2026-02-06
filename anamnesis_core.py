@@ -206,3 +206,70 @@ def update(f):
 
 ani = FuncAnimation(fig, update, frames=PARAMS['steps'], interval=10, blit=False)
 plt.show()
+
+# Ajoutez ces améliorations au code existant :
+
+# 1. HUD d'information en temps réel
+def add_hud(ax, frame, states, divs, taus):
+    # État psychologique
+    crisis_level = "🔴 CRISE" if np.any(states > 2.5) else "🟡 TENSION" if np.any(states > 1.5) else "🟢 STABLE"
+    
+    # Texte flottant
+    info_text = f"""Frame: {frame}
+État: {crisis_level}
+Diversité Moy: {np.mean(divs):.2f}
+Mémoire Max: {np.max(memory_matrix):.2f}"""
+    
+    ax.text2D(0.02, 0.98, info_text, transform=ax.transAxes, 
+              fontsize=10, va='top', family='monospace',
+              bbox=dict(boxstyle='round', facecolor='black', alpha=0.7))
+
+# 2. Traînées de particules (historique visuel)
+particle_trails = [deque(maxlen=50) for _ in range(num_agents)]
+
+def update_trails():
+    for i in range(num_agents):
+        particle_trails[i].append(positions[i].copy())
+    
+    # Rendu des traînées
+    for i, trail in enumerate(particle_trails):
+        if len(trail) > 1:
+            trail_array = np.array(trail)
+            ax.plot(trail_array[:,0], trail_array[:,1], trail_array[:,2],
+                   c=colors[i], alpha=0.3, linewidth=1)
+
+# 3. Effets de pulsation sur les agents en crise
+def render_agents_with_effects():
+    for i in range(num_agents):
+        size = 100 + states[i] * 100
+        
+        # Halo de stress
+        if states[i] > 1.5:
+            ax.scatter(positions[i,0], positions[i,1], positions[i,2],
+                      s=size*2, c=colors[i], alpha=0.2, edgecolors='none')
+        
+        # Agent principal
+        ax.scatter(positions[i,0], positions[i,1], positions[i,2],
+                  s=size, c=colors[i], alpha=0.9, 
+                  edgecolors='white', linewidths=2)
+
+# 4. Visualisation de la mémoire comme "cordes tendues"
+def render_memory_links():
+    for i in range(num_agents):
+        for j in range(i+1, num_agents):
+            mem_strength = (memory_matrix[i,j] + memory_matrix[j,i]) / 2.0
+            
+            if mem_strength > 0.5:  # Seuil de visibilité
+                # Couleur = gradient selon intensité
+                color = plt.cm.hot(mem_strength / 5.0)
+                
+                # Épaisseur proportionnelle
+                width = 0.5 + mem_strength * 3
+                
+                # Style selon état
+                style = '-' if (states[i] + states[j]) > 2 else '--'
+                
+                ax.plot([positions[i,0], positions[j,0]],
+                       [positions[i,1], positions[j,1]],
+                       [positions[i,2], positions[j,2]],
+                       c=color, alpha=0.6, lw=width, linestyle=style)
