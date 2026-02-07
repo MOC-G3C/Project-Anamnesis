@@ -122,6 +122,28 @@ if st.sidebar.button("🔥 Simulate Trauma", type="primary"):
         - Demand higher payment for cooperation
         - Occasionally have trust breakdowns (random negative events)
         """)
+        # Dans la section "Game Design Implication", ajoute :
+
+st.markdown("""
+**Example In-Game Dialogue:**
+
+*Turn 1 (Before Trauma):*
+> **Leader:** "Ah, my trusted ally! What brings you here?"
+> [Quest Available: "Defend the Castle"]
+
+*Turn 50 (Player betrays Leader):*
+> **System:** ⚠️ Topological scar formed (Strength: 0.73)
+
+*Turn 100 (Player tries to reconcile):*
+> **Leader:** "You want my trust again? The gold you bring means nothing. 
+> The scar you left... it changes how I see the world now."
+> [Quest Available: "Fetch Supplies" only - no critical missions]
+
+*Turn 500 (Player saves Leader's life):*
+> **Leader:** "I... appreciate what you did. But some wounds don't heal. 
+> I can work with you. I can't trust you. Not like before."
+> [Relationship: 60/100 | Scar: Permanent | Critical Missions: LOCKED]
+""")
     
     # === EXPORT ===
     export_data = {
