@@ -141,31 +141,96 @@ Built on principles from:
 ---
 
 *"The scar is not a bug - it's the feature."*
+## 🚀 Try It Online
+
+**[Live Demo →](https://anamnesisappsimplepy-p2enl7ufhacnncopz8xpxm.streamlit.app/)**
+
+No installation needed - simulate trauma events in your browser.
+
+---
 ```
 
 ---
 
-## **SEMAINE 2 (17-23 Février) : Polish & Partage Privé**
+### **4. Créer un Fichier `LICENSE`**
 
-### **Lundi-Mercredi : Tester avec 3-5 Personnes**
+GitHub détecte automatiquement les licences et affiche un badge.
 
-**Objectif :** Feedback avant de rendre public
+**Action :**
+1. Va sur ton repo GitHub
+2. Clique "Add file" → "Create new file"
+3. Nomme-le `LICENSE`
+4. Choisis "MIT License" dans le dropdown
+5. Remplace `[year]` par `2026` et `[fullname]` par `Marc-Olivier Corbin`
+6. Commit
 
-**Personnes à contacter :**
-1. Un ami game dev (même amateur)
-2. Un prof/chercheur en IA (si tu en connais)
-3. Quelqu'un qui joue aux RPGs
+**Résultat :** Badge "License: MIT" apparaît automatiquement.
 
-**Message type :**
+---
+
+## 📅 PLAN POUR LES 2 PROCHAINES SEMAINES
+
+### **Semaine 2 (17-23 Février) : Feedback Privé**
+
+**Objectif :** Tester avec 5 personnes AVANT de poster sur Reddit
+
+**Qui contacter :**
+1. **Discord "Game Dev League"** - Partage en DM à 2-3 membres actifs
+2. **LinkedIn** - Si t'as des contacts en jeu vidéo
+3. **Amis qui jouent aux RPGs** - Montre-leur la démo, demande "est-ce que ça te parlerait dans un jeu ?"
+
+**Template de message :**
 ```
 Hey [nom],
 
-Je travaille sur un projet de mémoire pour NPCs de jeux vidéo.
-L'idée : les personnages se souviennent des traumas de façon permanente.
+Je bosse sur un système de mémoire pour NPCs de jeux vidéo.
+L'idée : les personnages se souviennent des traumas de façon permanente 
+(pas juste un score de réputation qui monte/descend).
 
-J'ai une démo web interactive (5 min à tester).
-Serais-tu game de me donner du feedback honnête ?
+J'ai une démo interactive de 2 minutes :
+https://anamnesisappsimplepy-p2enl7ufhacnncopz8xpxm.streamlit.app/
 
-Lien : [ton-url-locale ou Streamlit Cloud]
+Ça te prendrait 5 min de tester et me dire :
+1. Est-ce que le concept est clair ?
+2. Est-ce que tu verrais ça dans un jeu ?
+3. Qu'est-ce qui est confus ?
 
-Merci !
+Merci ! 🙏
+```
+
+**Collecte le feedback dans un Google Doc.**
+
+---
+
+### **Semaine 3 (24 Février - 2 Mars) : Première Publication Reddit**
+
+**Subreddit cible :** **r/proceduralgeneration** (100k membres, moins intimidant que r/gamedev)
+
+**Pourquoi ce sub ?**
+- Communauté technique mais accessible
+- Apprécient les approches basées sur la physique
+- Moins de noise que r/gamedev
+- Historique de posts similaires qui ont bien marché
+
+**Template de post Reddit** (je te le donne quand tu seras prêt) :
+```
+Title: I built a trauma memory system for NPCs using phase transition physics [Open Source]
+
+Body:
+Hey r/proceduralgeneration,
+
+I've been working on ANAMNESIS, a system that gives NPCs "topological scars" 
+- permanent memories that can't be fully healed.
+
+Unlike reputation systems (numbers that go up/down), this uses physics-based 
+memory formation. When a traumatic event occurs, it creates an irreversible 
+structural change in the relationship network.
+
+**Live demo:** [ton-lien-streamlit]
+**Code:** https://github.com/MOC-G3C/Project-Anamnesis
+
+Built with Python/NumPy, based on Landau phase transition theory.
+
+[Screenshot de la heatmap]
+
+Feedback welcome!
